@@ -130,4 +130,73 @@ h2
 		.Introduction a:hover 
 		{
 			color: #262626;
+        }
+        
+/* --------- .loginBox Styles -------------*/
+.loginBox
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 420px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.2);
+}
+/* --------- .loginBox h2 -------------*/
+	.loginBox h2
+	{
+		font-weight: bold;
+		color: #1e90ff;
+	}
+/* --------- .loginBox p -------------*/
+	.loginBox p
+	{
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+		color: #000000;
+	}
+/* --------- .loginBox input -------------*/
+	.loginBox input
+	{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	/* --------- .loginBox input type[text, password] -------------*/
+		.loginBox input[type="text"],
+		.loginBox input[type="password"]
+		{
+			border: none;
+			border-bottom: 1px solid #000000;
+			background: transparent;
+			outline: none;
+			height: 40px;
+			color: #000000;
+			font-size: 16px;
 		}
+	/* --------- .loginBox placeholder -------------*/	
+		::placeholder
+		{
+			color: rgba(255,255,255,.9);
+		}
+	/* --------- .loginBox input type[submit] -------------*/	
+		.loginBox input[type="submit"]
+		{
+			border: none;
+			outline: none;
+			height: 30px;
+			color: #000000;
+			font-size: 16px;
+			background: #1e90ff;
+			cursor: pointer;
+			border-radius: 20px;
+		}
+		/* --------- .loginBox input type[submit]:hover -------------*/
+			.loginBox input[type="submit"]:hover
+			{
+				background: #262626;
+				color: #ffffff;
+			}
