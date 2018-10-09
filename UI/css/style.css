@@ -95,7 +95,7 @@ h2
 	height: 320px;
 	padding: 80px 40px;
 	box-sizing: border-box;
-	background: rgba(0,0,0,.5);
+	background: rgba(0,0,0,.2);
 }
 /* --------- .Introduction p -------------*/
 	.Introduction p
@@ -117,8 +117,8 @@ h2
 /* --------- .Introduction a -------------*/
 	.Introduction a
 	{
-		color: #fff;
-    	font-size: 14px;
+		color: #1e90ff;
+    	font-size: 18px;
 		font-weight: bold;
 		text-decoration: none;
 		-moz-transition: color 0.2s ease-in-out;
