@@ -200,3 +200,48 @@ h2
 				background: #262626;
 				color: #ffffff;
 			}
+
+/* --------- .jumbo -------------*/
+.jumbo h2 
+{
+	padding: 80px 20px;
+	color: #8B4513;
+}
+/* --------- table -------------*/
+	table 
+	{
+		position: fixed;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 95%;
+		padding: 40px 20px;
+		box-sizing: border-box;
+		background: #f2f2f2;
+	}
+	/* --------- table th, td -------------*/		
+		th, td 
+		{
+			text-align: left;
+			padding: 9px;
+		}
+
+/* --------- button -------------*/
+button 
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	background: #8B4513;
+	cursor: pointer;
+	border-radius: 10px;
+}
+/* --------- button:hover -------------*/
+	button:hover
+	{
+		color: #262626;
+		background: grey;
+	}
+
