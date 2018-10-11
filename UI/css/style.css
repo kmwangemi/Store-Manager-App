@@ -259,7 +259,7 @@ button
 	}
 
 /* --------- .frmCategory fieldset -------------*/
-.frmCategory fieldset 
+.frmCategory fieldset
 {
 	position: fixed;
 	top: 55%;
@@ -271,21 +271,35 @@ button
 	box-sizing: border-box;
 	background: #f2f2f2;
 }
+/* --------- .frmProduct fieldset -------------*/
+.frmProduct fieldset 
+{
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 680px;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	background: #f2f2f2;
+}
 	/* --------- .frmCategory input.text -------------*/
-	.frmCategory input.text 
+	.frmCategory input.text, .frmProduct input.text 
 	{
 		width: 200px;
 		padding: 10px 10px;
 		font-size: 	1.0em;
 	}
 	/* --------- .frmCategory input.text:focus -------------*/
-	.frmCategory input.text:focus, #frmCategory textarea:focus
+	.frmCategory input.text:focus, .frmCategory textarea:focus, 
+	.frmProduct input.text:focus, .frmProduct textarea:focus
 	{
 		background: #EDDAB1;
 		border: 1px solid #9D6124;
 	}
 	/* --------- .frmCategory p -------------*/
-	.frmCategory p 
+	.frmCategory p, .frmProduct p 
 	{
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 1.2em;
@@ -300,6 +314,15 @@ button
 		text-align: center;
 		font-size: 25px;
 	}
+	/* --------- .productForm h3 -------------*/
+	.productForm h3
+	{
+		padding: 80px 10px;
+		color: #8B4513;
+		text-align: center;
+		font-size: 25px;
+	}
+
 
 	
 	
