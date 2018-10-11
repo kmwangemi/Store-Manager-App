@@ -180,7 +180,7 @@ h2
 	/* --------- .loginBox placeholder -------------*/	
 		::placeholder
 		{
-			color: rgba(255,255,255,.9);
+			color: rgba(182, 177, 177, 0.9);
 		}
 	/* --------- .loginBox input type[submit] -------------*/	
 		.loginBox input[type="submit"]
@@ -201,7 +201,20 @@ h2
 				color: #ffffff;
 			}
 
-/* --------- .jumbo -------------*/
+/* --------- .jumbo input[type="text"] -------------*/
+.jumbo input[type="text"]
+{
+	background: #f2f2f2;
+	color: #000000;
+	position: absolute;
+	top: 15%;
+	left: 83%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 5px;
+	padding: 10px 10px;
+}
+/* --------- .jumbo h2-------------*/
 .jumbo h2 
 {
 	padding: 80px 20px;
