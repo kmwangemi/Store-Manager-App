@@ -1,0 +1,385 @@
+/* Body */
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+/* Header */
+	#header {
+		/*background: rgba(9, 3, 80, 0.5); */
+		background: #487eb0;
+		border-bottom: solid 1px rgba(144, 144, 144, 0.25);
+		box-shadow: 0px 0.0375em 0.125em 0px rgba(0, 0, 0, 0.05);
+		color: #484848;
+		cursor: default;
+		font-size: 0.85em;
+		height: 4.5em;
+		left: 0;
+		line-height: 4.4em;
+		position: fixed;
+		text-transform: capitalize;
+		top: 0;
+		width: 100%;
+		z-index: 10000;
+		z-index: 10001;
+	}
+	/* Header h1*/
+		#header h1 {
+			color: #ffffff;
+			font-weight: 100;
+			height: inherit;
+			left: 1.25em;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+		}
+		/* Header a h1:hover*/
+		#header a h1:hover {
+            color: #262626;
+        }
+		/* Header nav*/
+		#header nav {
+			height: inherit;
+			line-height: inherit;
+			position: absolute;
+			right: 1.25em;
+			top: 0;
+			vertical-align: middle;
+		}
+		/* Header nav ul*/
+			#header nav ul {
+				list-style: none;
+				margin: 0;
+				padding-left: 0;
+			}
+			/* Header nav ul li*/
+				#header nav ul li {
+					border-radius: 4px;
+					display: inline-block;
+					margin-left: 2.5em;
+					padding-left: 0;
+				}
+				/* Header nav ul li a*/
+					#header nav ul li a {
+						-moz-transition: color 0.2s ease-in-out;
+						-webkit-transition: color 0.2s ease-in-out;
+						-ms-transition: color 0.2s ease-in-out;
+						transition: color 0.2s ease-in-out;
+						color: #fff;
+						display: inline-block;
+						text-decoration: none;	
+					}
+					/* Header nav ul li a:hover*/
+						#header nav ul li a:hover {
+							color: #262626;
+						}
+/* h2 Styles*/
+h2
+{
+	margin: 0;
+	padding: 0 0 20px;
+	color: #1e90ff;
+	text-align: center;
+}
+
+/* --------- .Introduction Styles -------------*/
+.Introduction
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+	height: 320px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.2);
+}
+/* --------- .Introduction p -------------*/
+	.Introduction p
+	{
+		margin: 10px;
+    	padding: 10px;
+    	line-height: 1.4em;
+    	text-align: left;
+    	font-size: 0.7em;
+		color: #000000;
+	}
+/* --------- .Introduction h2 -------------*/
+	.Introduction h2
+	{
+		margin: 0;
+		padding: 0;
+		color: #000000;
+	}
+/* --------- .Introduction a -------------*/
+	.Introduction a
+	{
+		color: #1e90ff;
+    	font-size: 18px;
+		font-weight: bold;
+		text-decoration: none;
+		-moz-transition: color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out;
+	}
+	/* --------- .Introduction a:hover -------------*/
+		.Introduction a:hover 
+		{
+			color: #262626;
+        }
+        
+/* --------- .loginBox Styles -------------*/
+.loginBox
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 420px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.2);
+}
+/* --------- .loginBox h2 -------------*/
+	.loginBox h2
+	{
+		font-weight: bold;
+		color: #1e90ff;
+	}
+/* --------- .loginBox p -------------*/
+	.loginBox p
+	{
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+		color: #000000;
+	}
+/* --------- .loginBox input -------------*/
+	.loginBox input
+	{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	/* --------- .loginBox input type[text, password] -------------*/
+		.loginBox input[type="text"],
+		.loginBox input[type="password"]
+		{
+			border: none;
+			border-bottom: 1px solid #000000;
+			background: transparent;
+			outline: none;
+			height: 40px;
+			color: #000000;
+			font-size: 16px;
+		}
+	/* --------- .loginBox placeholder -------------*/	
+		::placeholder
+		{
+			color: rgba(182, 177, 177, 0.9);
+		}
+	/* --------- .loginBox input type[submit] -------------*/	
+		.loginBox input[type="submit"]
+		{
+			border: none;
+			outline: none;
+			height: 30px;
+			color: #000000;
+			font-size: 16px;
+			background: #1e90ff;
+			cursor: pointer;
+			border-radius: 20px;
+		}
+		/* --------- .loginBox input type[submit]:hover -------------*/
+			.loginBox input[type="submit"]:hover
+			{
+				background: #262626;
+				color: #ffffff;
+			}
+
+/* --------- .jumbo input[type="text"] -------------*/
+.jumbo input[type="text"]
+{
+	background: #f2f2f2;
+	color: #000000;
+	position: absolute;
+	top: 15%;
+	left: 83%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 5px;
+	padding: 10px 10px;
+}
+/* --------- .jumbo h2-------------*/
+.jumbo h2 
+{
+	padding: 80px 20px;
+	color: #8B4513;
+}
+/* --------- table -------------*/
+	table 
+	{
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 95%;
+		padding: 40px 20px;
+		box-sizing: border-box;
+		background: #f2f2f2;
+	}
+	/* --------- table th, td -------------*/		
+		th, td 
+		{
+			text-align: left;
+			padding: 9px;
+		}
+
+/* --------- button -------------*/
+button 
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	background: #8B4513;
+	cursor: pointer;
+	border-radius: 10px;
+}
+/* --------- button:hover -------------*/
+	button:hover
+	{
+		color: #262626;
+		background: grey;
+	}
+
+/* --------- .frmCategory fieldset -------------*/
+.frmCategory fieldset
+{
+	position: fixed;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 350px;
+	padding: 10px 10px;
+	box-sizing: border-box;
+	background: #f2f2f2;
+}
+/* --------- .frmProduct fieldset -------------*/
+.frmProduct fieldset 
+{
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 680px;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	background: #f2f2f2;
+}
+	/* --------- .frmCategory input.text -------------*/
+	.frmCategory input.text, .frmProduct input.text 
+	{
+		width: 200px;
+		padding: 10px 10px;
+		font-size: 	1.0em;
+	}
+	/* --------- .frmCategory input.text:focus -------------*/
+	.frmCategory input.text:focus, .frmCategory textarea:focus, 
+	.frmProduct input.text:focus, .frmProduct textarea:focus
+	{
+		background: #EDDAB1;
+		border: 1px solid #9D6124;
+	}
+	/* --------- .frmCategory p -------------*/
+	.frmCategory p, .frmProduct p 
+	{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.2em;
+		color: #000000;
+		line-height: 40px;
+	}
+	/* --------- .cartForm h3 -------------*/
+	.cartForm h3
+	{
+		padding: 80px 20px;
+		color: #8B4513;
+		text-align: center;
+		font-size: 25px;
+	}
+	/* --------- .productForm h3 -------------*/
+	.productForm h3
+	{
+		padding: 80px 10px;
+		color: #8B4513;
+		text-align: center;
+		font-size: 25px;
+	}
+
+/* --------- .form-wrap -------------*/
+.form-wrap
+{
+	position: absolute;
+	top: 90%;
+	left: 15%;
+	transform: translate(-50%,-50%);
+	width: 320px;
+	height: 500px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	background: #f2f2f2;
+}
+/* --------- .form-wrap p -------------*/
+	.form-wrap p
+		{
+			margin: 0;
+			padding: 0;
+			font-weight: bold;
+			color: #000000;
+		}
+/* --------- .form-wrap h1-------------*/
+	.form-wrap h1
+	{
+		margin-bottom: 10px;
+		padding: 0 0 10px;
+		color: #8B4513;
+		text-align: center;
+	}
+/* --------- .form-wrap input-------------*/
+	.form-wrap input
+	{
+		width: 100%;
+		margin-bottom: 20px;
+		border: 1px solid #fff;
+		border-radius: 3px;
+		padding: 6px 15px;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		font-size: 16px;
+		color: #000000;
+	}
+/* --------- .form-wrap input type[text] -------------*/
+.form-wrap input[type="text"],
+.form-wrap input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #000000;
+	font-size: 16px;
+}
+
+
+
+	
+	
+
