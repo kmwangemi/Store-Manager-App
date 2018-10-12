@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> Store Manager </title>
+        <link rel="stylesheet" href="css/style.css"> 
+    </head>
+    <body>
+    <!-- Header -->
+    <header id="header" class="alt">
+        <a href="category.html"> <h1> Store Manager </h1> </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="sales.html">Sales Record</a></li>
+                <li><a href="products.html">Add Product</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- form-wrap -->    
+    <div class="form-wrap">
+        <h1>Create User</h1>
+        <form id="frmRegister" name="frmRegister" method="post" action="regComplete.htm">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+            <input type="text" placeholder="Admin [True or False]">
+            <br/>
+            <p>
+                <button type="submit" Class="btn btn-save">Save</button>
+                <br />
+            </p>
+        </form>
+    </div> 
+    <div class="jumbo">
+        <input type="text" placeholder="Search">
+        <h2>Attendants Profile</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID:</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                    <th>Admin</th>
+                    <th>Total Sales</th>
+                    <th>Sold Quantity</th>
+                    <th>Total(Ksh)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-md-1">001</td>
+                    <td class="col-md-2">Kelly</td>
+                    <td class="col-md-3">Ashley</td>
+                    <td class="col-md-4">Ashley</td>
+                    <td class="col-md-5">False</td>
+                    <td class="col-md-6">5</td>
+                    <td class="col-md-7">10</td>
+                    <td class="col-md-8">15000</td>
+                    <td><a href="attendant.html"><button type='button' class="btn btn-danger">Delete</button></a></td>
+                    <td><a href="attendant.html"><button type='button' class="btn btn-success">Edit</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
