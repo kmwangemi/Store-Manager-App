@@ -223,7 +223,7 @@ h2
 /* --------- table -------------*/
 	table 
 	{
-		position: fixed;
+		position: absolute;
 		top: 35%;
 		left: 50%;
 		transform: translate(-50%,-50%);
@@ -322,6 +322,62 @@ button
 		text-align: center;
 		font-size: 25px;
 	}
+
+/* --------- .form-wrap -------------*/
+.form-wrap
+{
+	position: absolute;
+	top: 90%;
+	left: 15%;
+	transform: translate(-50%,-50%);
+	width: 320px;
+	height: 500px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	background: #f2f2f2;
+}
+/* --------- .form-wrap p -------------*/
+	.form-wrap p
+		{
+			margin: 0;
+			padding: 0;
+			font-weight: bold;
+			color: #000000;
+		}
+/* --------- .form-wrap h1-------------*/
+	.form-wrap h1
+	{
+		margin-bottom: 10px;
+		padding: 0 0 10px;
+		color: #8B4513;
+		text-align: center;
+	}
+/* --------- .form-wrap input-------------*/
+	.form-wrap input
+	{
+		width: 100%;
+		margin-bottom: 20px;
+		border: 1px solid #fff;
+		border-radius: 3px;
+		padding: 6px 15px;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		font-size: 16px;
+		color: #000000;
+	}
+/* --------- .form-wrap input type[text] -------------*/
+.form-wrap input[type="text"],
+.form-wrap input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #000000;
+	font-size: 16px;
+}
+
 
 
 	
