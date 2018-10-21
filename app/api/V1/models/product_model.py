@@ -15,4 +15,4 @@ class Product(object):
         self.new_product['price'] = price
         self.new_product['description'] = description
         self.products[id] = self.new_product
-        return {"message" : "{} added successfully".format(id)}
+        return self.products[id]
