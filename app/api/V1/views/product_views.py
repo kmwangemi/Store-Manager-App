@@ -19,7 +19,21 @@ product_info = Product()
 
 @app.route('/api/v1/products', methods=['POST'])
 def create_product():
-    return ""
+    data = request.get_json()
+
+    if not data or not data['product_name'].strip():
+        return jsonify({"message": "Fields cannot be empty!"}), 401
+    for pro in product_info.products.values():
+        if data['product_name'].strip() == pro['product_name']:
+            return jsonify({"message": "Sorry!! Product_name taken!"}), 401
+
+    new_product = product_info.add_products(product_name=data['product_name'],
+                                            category=data['category'],
+                                            quantity=data['quantity'],
+                                            price=data['price'],
+                                            description=data['description'])
+    return jsonify({'message' : 'Product created', 'product' : new_product})
+
    
 @app.route('/api/v1/products', methods=['GET'])
 def get_all_products():
