@@ -8,9 +8,6 @@ coverage.xml
 *.cover
 .pytest_cache/
 
-# Flask stuff:
-instance/
-
 # Sphinx documentation
 docs/_build/
 
