@@ -1,9 +1,8 @@
 '''Product model'''
+
+products = {}
 class Product(object):
     """product model to store all products data"""
-    def __init__(self):
-        """ Initializes empty products list"""
-        self.products = {}
 
     def add_products(self, product_name, category, quantity, price, description):
         """Adds a new product to the products list"""
@@ -14,5 +13,10 @@ class Product(object):
         self.new_product['quantity'] = quantity
         self.new_product['price'] = price
         self.new_product['description'] = description
-        self.products[id] = self.new_product
-        return self.products[id]
+        products[id] = self.new_product
+        return products[id]
+
+    def get_all_products(self):
+        if None:
+            return {"message" : "No product found"}
+        return products

@@ -1,10 +1,9 @@
 '''Sale model'''
+
+sales = {}
 class Sale(object):
     """sale model to store all sales data"""
-    def __init__(self):
-        """ Initializes empty sales list"""
-        self.sales = []
- 
+    
     def add_sales(self, date_created, product, description, quantity, stock_quantity, price, total, attendant):
         """Adds a new sale to the sales list"""
         self.new_sale = {}
@@ -17,5 +16,10 @@ class Sale(object):
         self.new_sale['price'] = price
         self.new_sale['total'] = total
         self.new_sale['attendant'] = attendant
-        self.sales[id] = self.new_sale
-        return {"message" : "{} added successfully".format(id)}
+        sales[id] = self.new_sale
+        return sales[id]
+
+    def get_all_sales(self):
+        if None:
+            return {"message" : "No sale found"}
+        return sales
