@@ -1,32 +1,28 @@
-from flask import request, jsonify, make_response
-from werkzeug.security import generate_password_hash, check_password_hash
-from functools import wraps
-from app import app
-import os
-import datetime
-import jwt
-import re
-import uuid
+from flask import request, jsonify, Blueprint, json
 
 from app.api.V1.models.product_model import Product
-from app.api.V1.models.user_model import User
+product = Blueprint('product', __name__,url_prefix='/api/v1')
 
-user_info = User()
 product_info = Product()
 
-
 #products routes
-
-@app.route('/api/v1/products', methods=['POST'])
+@product.route('/products',methods=['POST'])
 def create_product():
-    return ""
+    data = request.get_json()
+    if not data:
+        return jsonify({'message' : 'Please insert data'})
+    new_product = product_info.add_products(product_name=data['product_name'],
+                                            category=data['category'],
+                                            quantity=data['quantity'],
+                                            price=data['price'],
+                                            description=data['description'])
+    return jsonify({'message' : 'Product created', 'product' : new_product}), 201
+
    
-@app.route('/api/v1/products', methods=['GET'])
+@product.route('/products',methods=['GET'])
 def get_all_products():
-    return ""
+    pass
 
-@app.route('/api/v1/products/<productId>', methods=['GET'])
+@product.route('/products/<int:product_id>',methods=['GET']) 
 def get_one_product():
-    return ""
-
-
+    pass
