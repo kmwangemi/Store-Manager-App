@@ -2,13 +2,12 @@ language: python
 python:
   - "2.7"
 # command to install dependencies
-cache: pip
 install:
-  - pip install coveralls
   - pip install -r requirements.txt
+  
 # command to run tests
 script:
-- nosetests tests/V1/* --with-coverage 
+- nosetests tests/V1/* --with-coverage --cover-package=app && coverage report
 
 # run coverage tests
 after_success:

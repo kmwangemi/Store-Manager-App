@@ -17,6 +17,9 @@ class Product(object):
         return products[id]
 
     def get_all_products(self):
-        if None:
-            return {"message" : "No product found"}
         return products
+
+    def get_one_product(self, id):
+        if id in products:
+            return products[id]
+        return {"message": "Product not found"}
