@@ -21,7 +21,11 @@ def create_product():
    
 @product.route('/products',methods=['GET'])
 def get_all_products():
-    pass
+    """Gets all products"""
+    response = jsonify(product_info.get_all_products())
+    response.status_code = 200
+    return response
+
 
 @product.route('/products/<int:product_id>',methods=['GET']) 
 def get_one_product():

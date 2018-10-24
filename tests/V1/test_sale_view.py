@@ -12,7 +12,7 @@ class SalestestCase(unittest.TestCase):
         self.client = app.test_client
 
         self.sale = {
-                        "product_name" : "product_name",
+                        "product" : "product",
                         "description" : "description",
                         "quantity" : "quantity",
                         "stock_quantity" : "stock_quantity",
@@ -22,7 +22,7 @@ class SalestestCase(unittest.TestCase):
                     }
 
         self.empty_sale = {
-                            "product_name" : "",
+                            "product" : "",
                             "description" : "",
                             "quantity" : "",
                             "stock_quantity" : "",
@@ -32,9 +32,18 @@ class SalestestCase(unittest.TestCase):
                             }
 
 
+    '''Tests for sale creation'''
     def test_sale_created_successfully(self):
         """Tests that a sale is created successfully"""
-        pass
+        res = self.client().post('/api/v1/sales', data=json.dumps(self.sale), content_type='application/json')
+        self.assertEqual(res.status_code, 201)
+        self.assertIn("Sale created", str(res.data))
+    
+    def test_sale_cannot_create_with_no_details(self):
+        """Tests that a sale cannot be created with no details"""
+        res = self.client().post('/api/v1/sales', data=json.dumps(self.empty_sale), content_type='application/json')
+        self.assertEqual(res.status_code, 201)
+
         
     
    
