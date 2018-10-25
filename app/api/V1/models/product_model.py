@@ -1,20 +1,28 @@
 '''Product model'''
 
-products = {}
+products = []
+
 class Product(object):
     """product model to store all products data"""
 
-    def add_products(self, product_name, category, quantity, price, description):
+    def __init__(self, product_name, category, quantity, price, description):
+        self.product_name = product_name
+        self.category = category
+        self.quantity = quantity
+        self.price = price
+        self.description = description
+
+    def add_products(self):
         """Adds a new product to the products list"""
-        self.new_product = {}
-        self.new_product['id'] = str(len(self.new_product)+1)
-        self.new_product['product_name'] = product_name
-        self.new_product['category'] = category
-        self.new_product['quantity'] = quantity
-        self.new_product['price'] = price
-        self.new_product['description'] = description
-        products[id] = self.new_product
-        return products[id]
+        new_product = {}
+        new_product['id'] = str(len(products)+1)
+        new_product['product_name'] = self.product_name
+        new_product['category'] = self.category
+        new_product['quantity'] = self.quantity
+        new_product['price'] = self.price
+        new_product['description'] = self.description
+        products.append(new_product)
+        return new_product
 
     def get_all_products(self):
         return products
