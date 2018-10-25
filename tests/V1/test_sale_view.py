@@ -40,7 +40,12 @@ class SalestestCase(unittest.TestCase):
         res = self.client().post('/api/v1/sales', data=json.dumps(self.empty_sale), headers = {"content-type": "application/json"})
         self.assertEqual(res.status_code, 201)
 
-        
+    '''Tests for getting successfully created sales'''
+    def test_gets_successfully_created_sales(self):
+        """Tests that api gets all created sales"""
+        res = self.client().get('/api/v1/sales', data=json.dumps(self.sale), headers = {"content-type": "application/json"})
+        self.assertEqual(res.status_code, 200)
+        self.assertIn("Sales", str(res.data))    
     
    
    

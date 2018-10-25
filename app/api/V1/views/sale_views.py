@@ -16,9 +16,11 @@ def create_sale():
     new_sale = sale_info.add_sales()
     return jsonify({'message' : 'Sale created', 'sale' : new_sale}), 201
    
-@sale.route('/products', methods=['GET'])
+@sale.route('/sales', methods=['GET'])
 def get_all_sales():
-    pass
+    """Gets all sales"""
+    response = sale_info.get_all_sales()
+    return jsonify({'Sales' : response}), 200
 
 @sale.route('/api/v1/sales/<saleId>', methods=['GET'])
 def get_one_sale():

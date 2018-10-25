@@ -16,7 +16,7 @@ class Sale(object):
     def add_sales(self):
         """Adds a new sale to the sales list"""
         new_sale = {}
-        new_sale['sale_id'] = str(len(new_sale)+1)
+        new_sale['sale_id'] = str(len(sales)+1)
         new_sale['product_name'] = self.product_name
         new_sale['description'] = self.description
         new_sale['quantity'] = self.quantity
@@ -34,11 +34,3 @@ class Sale(object):
         if len(single_sale) == 0:
             return {"message": "Sale not found"}
         return single_sale[0]
-
-
-
-
-        if id in sales:
-            return sales[id]
-        return {"message": "Sale not found"}
-    
