@@ -1,8 +1,8 @@
-from flask import request, jsonify, Blueprint, json
-
+from flask import request, jsonify, Blueprint
 from app.api.V1.models.sale_model import Sale
-sale = Blueprint('sale', __name__,url_prefix='/api/v1')
-sale_info = Sale()
+
+sale = Blueprint('sale', __name__, url_prefix='/api/v1')
+sale_info = Sale('product_name', 'description', 'quantity', 'stock_quantity', 'price', 'total')
 
 
 #sales routes
@@ -13,13 +13,7 @@ def create_sale():
     data = request.get_json()
     if not data:
         return jsonify({'message' : 'Please insert data and submit'})
-    new_sale = sale_info.add_sales(product=data['product'],
-                                    description=data['description'],
-                                    quantity=data['quantity'],
-                                    stock_quantity=data['stock_quantity'],
-                                    price=data['price'],
-                                    total=data['total'],
-                                    attendant=data['attendant'])
+    new_sale = sale_info.add_sales()
     return jsonify({'message' : 'Sale created', 'sale' : new_sale}), 201
    
 @sale.route('/products', methods=['GET'])

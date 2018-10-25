@@ -39,12 +39,20 @@ class ProductstestCase(unittest.TestCase):
         res = self.client().post('/api/v1/products', data=json.dumps(self.empty_product), headers = {"content-type": "application/json"})
         self.assertEqual(res.status_code, 201)
 
-    '''Tests for getting created products'''
-    def test_successfully_gets_product_created(self):
+    '''Tests for getting successfully created products'''
+    def test_gets_successfully_created_products(self):
         """Tests that api gets all created products"""
         res = self.client().get('/api/v1/products', data=json.dumps(self.product), headers = {"content-type": "application/json"})
         self.assertEqual(res.status_code, 200)
         self.assertIn("Products", str(res.data))
+
+    '''Tests for getting one product'''
+    def test_gets_one_successfully_created_product(self):
+        """Tests that api gets one successfully created product"""
+        res = self.client().get('/api/v1/products/<product_id>', data=json.dumps(self.product), headers = {"content-type": "application/json"})
+        self.assertEqual(res.status_code, 200)
+        self.assertIn("Product", str(res.data))
+
 
    
 

@@ -15,7 +15,7 @@ class Product(object):
     def add_products(self):
         """Adds a new product to the products list"""
         new_product = {}
-        new_product['id'] = str(len(products)+1)
+        new_product['product_id'] = str(len(products)+1)
         new_product['product_name'] = self.product_name
         new_product['category'] = self.category
         new_product['quantity'] = self.quantity
@@ -27,7 +27,8 @@ class Product(object):
     def get_all_products(self):
         return products
 
-    def get_one_product(self, id):
-        if id in products:
-            return products[id]
-        return {"message": "Product not found"}
+    def get_one_product(self, product_id):
+        one_product = [one_product for one_product in products if one_product['product_id'] == product_id] #list comprehension
+        if len(one_product) == 0:
+            return {"message": "Product not found"}
+        return one_product[0]
