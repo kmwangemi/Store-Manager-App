@@ -48,7 +48,7 @@ class ProductstestCase(unittest.TestCase):
     '''Tests for getting one product'''
     def test_gets_one_successfully_created_product(self):
         """Tests that api gets one successfully created product"""
-        res = self.client().get('/api/v1/products/<product_id>', data=json.dumps(self.product), headers = {"content-type": "application/json"})
+        res = self.client().get('/api/v1/products/<productId>', data=json.dumps(self.product), headers = {"content-type": "application/json"})
         self.assertEqual(res.status_code, 200)
         self.assertIn("Product", str(res.data))
 

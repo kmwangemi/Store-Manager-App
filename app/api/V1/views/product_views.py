@@ -22,8 +22,8 @@ def get_all_products():
     return jsonify({'Products' : response}), 200
 
 
-@product.route('/products/<product_id>', methods=['GET']) 
-def get_one_product(product_id):
+@product.route('/products/<productId>', methods=['GET']) 
+def get_one_product(productId):
     """Gets one product"""
-    response = product_info.get_one_product(product_id)
+    response = product_info.get_one_product(productId)
     return jsonify({'Product' : response}), 200
