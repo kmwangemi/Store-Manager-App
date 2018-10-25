@@ -47,5 +47,12 @@ class SalestestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         self.assertIn("Sales", str(res.data))    
     
+    '''Tests for getting single sale'''
+    def test_gets_single_successfully_created_sale(self):
+        """Tests that api gets single successfully created sale"""
+        res = self.client().get('/api/v1/sales/<saleId>', data=json.dumps(self.sale), headers = {"content-type": "application/json"})
+        self.assertEqual(res.status_code, 200)
+        self.assertIn("Sale", str(res.data))
+
    
    

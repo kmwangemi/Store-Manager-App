@@ -22,9 +22,11 @@ def get_all_sales():
     response = sale_info.get_all_sales()
     return jsonify({'Sales' : response}), 200
 
-@sale.route('/api/v1/sales/<saleId>', methods=['GET'])
-def get_one_sale():
-    pass
+@sale.route('/sales/<saleId>', methods=['GET'])
+def get_single_sale(saleId):
+    """Gets a single sale"""
+    response = sale_info.get_single_sale(saleId)
+    return jsonify({'Sale' : response}), 200
 
 
 
