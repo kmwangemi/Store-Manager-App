@@ -4,6 +4,7 @@ import os
 from instance.config import app_config
 from app.api.V1.views.product_views import product
 from app.api.V1.views.sale_views import sale
+from app.api.V1.views.user_views import user
 
 def create_app(config_name="development"):
     '''configuring the Flask App'''
@@ -14,6 +15,7 @@ def create_app(config_name="development"):
 
     app.register_blueprint(product)
     app.register_blueprint(sale)
+    app.register_blueprint(user)
   
     return app
 
