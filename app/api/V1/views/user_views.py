@@ -22,10 +22,11 @@ def get_all_users():
     response = user_info.get_all_users()
     return jsonify({'Users' : response}), 200
 
-@user.route('/users', methods=['POST'])
-def get_one_user(saleId):
+@user.route('/users/<userId>', methods=['GET'])
+def get_one_user(userId):
     """Gets a single user"""
-    pass
+    response = user_info.get_one_user(userId)
+    return jsonify({'User' : response}), 200
 
 
 
