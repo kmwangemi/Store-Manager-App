@@ -3,7 +3,6 @@ import json
 from run import app
 from app.api.V1.views.product_views import product_info
 
-#import os
 
 class ProductstestCase(unittest.TestCase):
 

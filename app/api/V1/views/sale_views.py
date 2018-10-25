@@ -12,7 +12,7 @@ def create_sale():
     """Creates a sale record"""
     data = request.get_json()
     if not data:
-        return jsonify({'message' : 'Please insert data and submit'})
+        return jsonify({'message' : 'Please enter sale'})
     new_sale = sale_info.add_sales()
     return jsonify({'message' : 'Sale created', 'sale' : new_sale}), 201
    
