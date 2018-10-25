@@ -16,7 +16,7 @@ class Sale(object):
     def add_sales(self):
         """Adds a new sale to the sales list"""
         new_sale = {}
-        new_sale['id'] = str(len(new_sale)+1)
+        new_sale['sale_id'] = str(len(new_sale)+1)
         new_sale['product_name'] = self.product_name
         new_sale['description'] = self.description
         new_sale['quantity'] = self.quantity
@@ -29,7 +29,15 @@ class Sale(object):
     def get_all_sales(self):
         return sales
 
-    def get_one_sale(self, id):
+    def get_single_sale(self, sale_id):
+        single_sale = [single_sale for single_sale in sales if single_sale['sale_id'] == sale_id] #list comprehension
+        if len(single_sale) == 0:
+            return {"message": "Sale not found"}
+        return single_sale[0]
+
+
+
+
         if id in sales:
             return sales[id]
         return {"message": "Sale not found"}
