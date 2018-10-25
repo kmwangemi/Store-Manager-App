@@ -1,24 +1,9 @@
-# Unit test / coverage reports
-htmlcov/
+.vscode
+*.pyc
+.env
+.venv
 .coverage
 .coverage.*
 .cache
-nosetests.xml
-coverage.xml
 *.cover
 .pytest_cache/
-
-# Sphinx documentation
-docs/_build/
-
-# pyenv
-.vscode
-*.pyc
-
-# Environments
-.env
-.venv
-env.bak/
-venv.bak/
-
-

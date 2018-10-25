@@ -30,16 +30,21 @@ class ProductstestCase(unittest.TestCase):
     '''Tests for product creation'''
     def test_product_created_successfully(self):
         """Tests that a product is created successfully"""
-        res = self.client().post('/api/v1/products', data=json.dumps(self.product), content_type='application/json')
+        res = self.client().post('/api/v1/products', data=json.dumps(self.product), headers = {"content-type": "application/json"})
         self.assertEqual(res.status_code, 201)
         self.assertIn("Product created", str(res.data))
     
     def test_product_cannot_create_with_invalid_details(self):
         """Tests that a product cannot be created with empty fields"""
-        res = self.client().post('/api/v1/products', data=json.dumps(self.empty_product), content_type='application/json')
+        res = self.client().post('/api/v1/products', data=json.dumps(self.empty_product), headers = {"content-type": "application/json"})
         self.assertEqual(res.status_code, 201)
 
-    
+    '''Tests for getting created products'''
+    def test_successfully_gets_product_created(self):
+        """Tests that api gets all created products"""
+        res = self.client().get('/api/v1/products', data=json.dumps(self.product), headers = {"content-type": "application/json"})
+        self.assertEqual(res.status_code, 200)
+        self.assertIn("Products", str(res.data))
 
    
 
