@@ -16,10 +16,11 @@ def create_user():
     new_user = user_info.add_users()
     return jsonify({'message' : 'User created', 'user' : new_user}), 201
    
-@user.route('/users', methods=['POST'])
+@user.route('/users', methods=['GET'])
 def get_all_users():
     """Gets all users"""
-    pass
+    response = user_info.get_all_users()
+    return jsonify({'Users' : response}), 200
 
 @user.route('/users', methods=['POST'])
 def get_one_user(saleId):
