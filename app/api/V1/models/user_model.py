@@ -32,6 +32,3 @@ class User(object):
         if len(one_user) == 0:
             return {"message": "User not found"}
         return one_user[0]
-
-    def add_as_admin(self):
-        pass

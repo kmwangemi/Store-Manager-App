@@ -27,6 +27,7 @@ def get_one_user(userId):
     """Gets a single user"""
     response = user_info.get_one_user(userId)
     return jsonify({'User' : response}), 200
+    
 
 
 
